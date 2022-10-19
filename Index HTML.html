@@ -5,7 +5,7 @@
        <script src = "code.js"></script>
   </head>
   <body>
-    <img UATSpaceLogo-1/> 
+    <img src="UATSpaceLogo-1.JPG"/> 
       <h1>First programming experience</h1>
       <p>This is my first experience with any type of programming. From here, there is no limit for my potential. I have started a club here at the school and I am extremely excited to see where this avenue takes me in life. I am forming real realtionships with liked-minded individuals and people who share big picture goals with me. I could never forget about my friends back home, regardless of the new people I meet and the goals that we expand upon.</p>
       <button id="btnAlert"
@@ -14,10 +14,12 @@
        countdown<span id = "displaycountdown"></span>
 <script>
     pageelement = document.getElementById ("displaycountdown");
+    getuserinput();
     runtimer (pageelement)
 
 </script>
-
+<input type="button" id="BtnStart" value="Start" onclick="startbtnclick();"/>
+<input type="button" id="BtnStop" disabled=true value="Stop" onclick="stopbtnclick();"/>
 
   </body>
 </html>
