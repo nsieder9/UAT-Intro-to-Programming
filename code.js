@@ -1,8 +1,10 @@
+var intervalIds = new Array();
+
 function runtimer (pageelement){
     currtime = 50; 
     timeout = 0;
     for(i=0;i<11;i++){
-        setTimeout(function(){
+        intervalIds[i] = setTimeout(function(){
             if (currtime==0){
                 pageelement.innerHTML = currtime;
             alert("Blast Off")
@@ -61,9 +63,16 @@ alert("This is your fullname: " + fullname + " and your badgenumber is: " + badg
 function startbtnclick(){
 document.getElementById("BtnStart").disabled=true;
 document.getElementById("BtnStop").disabled=false;
+
+pageelement = document.getElementById ("displaycountdown");
+runtimer (pageelement)
 }
 function stopbtnclick(){
     document.getElementById("BtnStart").disabled=false;
     document.getElementById("BtnStop").disabled=true;
+
+    for(i=0;i<11;i++){
+        clearTimeout(intervalIds[i]); 
+    }
 }
 //this is a work in progress for a later assignment
