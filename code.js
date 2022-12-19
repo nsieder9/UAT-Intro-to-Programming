@@ -55,7 +55,7 @@ do{
 
 }while(badgenumber > 1000);
 
-alert("This is your fullname: " + fullname + " and your badgenumber is: " + badgenumber);
+alert("This is your full name: " + fullname + " and your badge number is: " + badgenumber);
 
 
 }
@@ -76,3 +76,25 @@ function stopbtnclick(){
     }
 }
 //this is a work in progress for a later assignment
+let currTime = new Date();
+    document.getElementByID("timeStamp").innerHTML = currTime;
+    //let nowDate = new Date();
+    //alert(nowDate); // shows current date/time
+    //calling the countdown timer with the span DisplayCountdown
+
+    function animateCarousel(){
+        const slidesContainer = document.getElementById("slides-container");
+        const slide = document.querySelector(".slide");
+        const prevButton = document.getElementById("slide-arrow-prev");
+        const nextButton = document.getElementById("slide-arrow-next");
+    
+        nextButton.addEventListener("click", () => {
+        const slideWidth = slide.clientWidth;
+        slidesContainer.scrollLeft += slideWidth;
+        });
+    
+        prevButton.addEventListener("click", () => {
+        const slideWidth = slide.clientWidth;
+        slidesContainer.scrollLeft -= slideWidth;
+        });
+    }

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+  <head>
+       <title>UAT Space Program</title>
+       <script src = "code.js"></script>
+
+
+       <style>
+        table, th, td{
+            border: 1px solid black;
+            padding: 10px;
+        }
+       </style>
+  </head>
+  <body style="background-color:darkgray">
+    
+    <audio controls>
+      <source src="space_sounds.mp3" type="audio/mpeg">
+    </audio> 
+
+    <img src="UAT_Space_Logo.jpg"/> 
+
+      <h1>First programming experience</h1>
+
+      <p>This is my first experience with any type of programming. From here, there is no limit for my potential. I have started a club here at the school and I am extremely excited to see where this avenue takes me in life. I am forming real realtionships with liked-minded individuals and people who share big picture goals with me. I could never forget about my friends back home, regardless of the new people I meet and the goals that we expand upon.</p>
+
+      <button id="btnAlert"
+       onclick="alert ('You Are Unlocking More Potential');">
+       UPGRADE</button>
+
+       countdown<span id = "displaycountdown"></span>
+
+<input type="button" id="BtnStart" value="Start" onclick="startbtnclick();"/>
+<input type="button" id="BtnStop" disabled=true value="Stop" onclick="stopbtnclick();"/>
+<!--this is an HTML document-->
+<P>
+    Countdown: <span id="DisplayCountdown">Ready for takeoff</span>
+</P>
+
+Page was last accessed: <div id="timeStamp"></div>
+
+<script>
+    let currTime = new Date();
+    document.getElementByID("timeStamp").innerHTML = currTime;
+    //let nowDate = new Date();
+    //alert(nowDate); // shows current date/time
+    //calling the countdown timer with the span DisplayCountdown
+
+
+</script>
+
+<table id="data" width="35%">
+    <thead>
+        <th>Data Type:</th>
+        <th>Reading:</th>
+    </thead>
+    <tbody>
+        <tr id="time_elapsed">
+            <td>Time Elapsed</td>
+            <td>1210 seconds</td>
+        </tr>
+        <tr id="latitud">
+            <td>Latitud</td>
+            <td>0</td>
+        </tr>
+        <tr id="longitude">
+            <td>Longitude</td>
+            <td>0</td>
+        </tr>
+        <tr id="gps_altitude">
+            <td>GPS Altitude</td>
+            <td>0</td>
+        </tr>
+        <tr id="bmp_sensor_altitude">
+            <td>BMP Sensor Altitude</td>
+            <td>30383.04</td>
+        </tr>
+        <tr id="bmp_sensor_pressure">
+            <td>BMP Sensor Pressure</td>
+            <td>2.34</td>
+        </tr>
+        <tr id="bmp_sensor_tempurature">
+            <td>BMP Sensor Tempurature</td>
+            <td>0</td>
+        </tr>
+        <tr id="digital_sensor_temperature">
+            <td>Digital Sensor Temperature</td>
+            <td>24</td>
+        </tr>
+        <tr id="css_sensor_temperature">
+            <td>CSS Sensor Temperature</td>
+            <td>32.48</td>
+        </tr>
+        <tr id="css_sensor_eco2">
+            <td>CSS Sensor eCO2</td>
+            <td>422</td>
+        </tr>
+        <tr id="css_sensor_tvoc">
+            <td>CSS Sensor TVOC</td>
+            <td>3</td>
+        </tr>
+        <tr id="uv">
+            <td>UV</td>
+            <td>6</td>
+        </tr>
+        <tr id="accel_x">
+            <td>Accel X</td>
+            <td>-0.75</td>
+        </tr>
+        <tr id="accel_y">
+            <td>Accel Y</td>
+            <td>-0.77</td>
+        </tr>
+        <tr id="accel_z">
+            <td>Accel Z</td>
+            <td>9.35</td>
+        </tr>
+        <tr id="magnetic_x">
+            <td>Magnetic X</td>
+            <td>-0.08</td>
+        </tr>
+        <tr id="magnetic_y">
+            <td>Magenetic Y</td>
+            <td>0.36</td>
+        </tr>
+        <tr id="magnetic_z">
+            <td>Magnetic Z</td>
+            <td>-0.53</td>
+        </tr>
+        <tr id="gyro_x">
+            <td>Gyro X</td>
+            <td>4.44</td>
+        </tr>
+        <tr id="gyro_y">
+            <td>Gyro Y</td>
+            <td>-0.95</td>
+        </tr>
+        <tr id="gyro_z">
+            <td>Gyro Z</td>
+            <td>1.72</td>
+        </tr>
+
+    </tbody>
+</table>
+
+<img src="UAT_Space.jpg">
+<script>
+    getuserinput();
+</script>
+
+
+  </body>
+
+</html>
